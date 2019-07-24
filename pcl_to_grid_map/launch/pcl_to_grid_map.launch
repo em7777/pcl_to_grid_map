@@ -1,0 +1,15 @@
+<launch>
+
+  <rosparam command="load" file="$(find pcl_to_grid_map)/config/pcl_to_grid_map.yaml" />
+
+  <node pkg="pcl_to_grid_map" type="PclToGridMap" name="PclToGridMap" ns="/" output="screen">
+  </node>
+
+  <!-- Launch the grid map visualizer -->
+  <node pkg="grid_map_visualization" type="grid_map_visualization" name="grid_map_visualization" output="screen" />
+
+
+  <!-- Launch RViz with the demo configuration -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d /home/mhost/Documents/grid_map_rviz.rviz" />
+
+</launch>
