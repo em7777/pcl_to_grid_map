@@ -18,8 +18,7 @@ find_package(catkin REQUIRED COMPONENTS
   pcl_ros
   sensor_msgs
 )
-find_package(octomap REQUIRED)
-message(STATUS "Found Octomap (version ${octomap_VERSION}): ${OCTOMAP_INCLUDE_DIRS}")
+
 
 ###################################
 ## catkin specific configuration ##
